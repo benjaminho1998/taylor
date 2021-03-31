@@ -1,0 +1,24 @@
+@import '../../styles/_mixins'
+    
+.tests-container
+    height: 100%
+
+.tests-subcontainer
+    height: calc(100% - 175px)
+
+.card.cards
+    width: 298px
+    border-radius: 10px
+    border: none
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+
+.card-spacing
+    margin-top: 40px
+
+button.btn.btn-dark.quiz-button
+    @include primary-button
+    margin: 0
+
+@media (max-width: 992px) 
+    .card.cards
+        width: 100%

@@ -1,0 +1,20 @@
+.image-row 
+  display: flex
+  flex-wrap: wrap
+  padding: 0 4px
+
+.image-col 
+  flex: 33.3%
+  max-width: 33.3%
+  padding: 0 4px
+
+
+.image-col img 
+  margin-top: 8px
+  vertical-align: middle
+  width: 100%
+
+@media screen and (max-width: 800px)
+  .image-col 
+    flex: 100%
+    max-width: 100%
