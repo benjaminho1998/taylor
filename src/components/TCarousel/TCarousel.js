@@ -7,7 +7,10 @@ import { useSelector, shallowEqual } from 'react-redux';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-const TCarousel = () => {
+const TCarousel = (props) => {
+
+    const low = props.low;
+    const high = props.high;
 
     const responsive = {
         desktop: {
@@ -24,17 +27,12 @@ const TCarousel = () => {
         }
     };
 
-    let top4 = [];
+    let sliced = [];
     const topNews = useSelector(state => state.newsList.news.articles, shallowEqual);
+    
     if(topNews !== undefined) {
-        top4 = topNews.slice(0, 6)
+        sliced = topNews.slice(low, high);
     }
-    // const news0 = useSelector(state => state.newsList.news.articles[0]);
-    // const news1 = useSelector(state => state.newsList.news.articles[1]);
-    // const news2 = useSelector(state => state.newsList.news.articles[2]);
-    // const news3 = useSelector(state => state.newsList.news.articles[3]);
-    // const news4 = useSelector(state => state.newsList.news.articles[4]);
-    // const topNews = [news0, news1, news2, news3, news4]
 
     return (
         <Carousel
@@ -45,14 +43,14 @@ const TCarousel = () => {
             ssr={true}
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={5000}
+            autoPlaySpeed={7500}
             keyBoardControl={true}
             transitionDuration={750}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
         >
-            {top4 && top4.map((article, index) => 
+            {sliced && sliced.map((article, index) => 
                 <CarouselItem 
                     key={index}
                     source={article.source.name}

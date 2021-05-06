@@ -6,6 +6,7 @@ import HeaderText from '../../components/HeaderText/HeaderText';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
 const Gallery = () => {
     return (
@@ -27,6 +28,11 @@ const Gallery = () => {
                         <ImageTile link="Taylorswift.com" name="Enchanted" num="9" />
                         <ImageTile link="Taylorswift.com" name="Personal" num="7" />
                     </div>
+                </div>
+            </Row>
+            <Row>
+                <div className="button-container">
+                    <Button variant="dark">Load More</Button>
                 </div>
             </Row>
         </Container>

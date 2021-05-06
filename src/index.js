@@ -4,6 +4,7 @@ import './index.sass';
 import App from './components/App/App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';

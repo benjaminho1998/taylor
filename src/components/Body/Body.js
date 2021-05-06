@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './Body.sass';
 import Quizzes from '../Quizzes/Quizzes';
 import Home from '../Home/Home';
+import News from '../News/News';
 import getNews from '../../store/actions/newsActions';
 
 import { Switch, Route } from "react-router-dom";
@@ -23,7 +24,7 @@ const Body = () => {
                     <Quizzes />
                 </Route>
                 <Route path="/news">
-                    <Quizzes />
+                    <News />
                 </Route>
                 <Route path="/bio">
                     <Quizzes />
