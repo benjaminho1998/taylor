@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
+import taylor1 from '../../images/news/taylor-news.jpg';
 
 const NewsList = () => {
 
@@ -28,7 +29,10 @@ const NewsList = () => {
                         <div onClick={() => clickHandler(item.url)} className="news-item" key={i}>
                             <Row>
                                 <Col xs={3}>
-                                    <Image className="news-list-img" src={item.urlToImage} />
+                                    {item.urlToImage !== null ? 
+                                        <Image className="news-list-img" src={item.urlToImage} /> :
+                                        <Image className="news-list-img" src={taylor1} />
+                                    }
                                 </Col>
                                 <Col xs={9}>
                                     <Row>

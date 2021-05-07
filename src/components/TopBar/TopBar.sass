@@ -1,8 +1,30 @@
+@import '../../styles/_variables'
+
 nav.navbar.navbar-expand-lg.navbar-dark.nav-container
     background-color: black
+    height: 60px
+    font-size: 20px
 
 .logo
     height: 30px
 
 a.nav-link:hover
     text-decoration: underline
+
+.top-top
+    height: 36px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $rose-gold
+    color: white
+
+.listen-now
+    font-weight: bold
+    margin-left: 4px
+    font-size: 18px
+
+@media screen and (max-width: 390px)
+    .top-top
+        height: 50px
+        flex-direction: column

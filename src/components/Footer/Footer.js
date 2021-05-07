@@ -7,19 +7,24 @@ import Row from 'react-bootstrap/Row';
 
 const Footer = () => {
     return(
-        <div className="footer-container">
-            <div className="footer-text">
-                <Row>
-                    <a href="https://github.com/benjaminho1998" target="_blank" rel="noopener noreferrer">
-                        <SiGithub />
-                    </a>
-                    <a href="https://www.linkedin.com/in/benjamin-ho-2703a6133/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin />
-                    </a>
-                </Row>
-                <Row>
-                    Benjamin Ho
-                </Row>
+        <div>
+            <div className="bottom-lyric">
+                "Long live all the magic we made..."
+            </div>
+            <div className="footer-container">
+                <div className="footer-text">
+                    <Row>
+                        <a href="https://github.com/benjaminho1998" target="_blank" rel="noopener noreferrer">
+                            <SiGithub />
+                        </a>
+                        <a href="https://www.linkedin.com/in/benjamin-ho-2703a6133/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin />
+                        </a>
+                    </Row>
+                    <Row>
+                        Benjamin Ho
+                    </Row>
+                </div>
             </div>
         </div>
     );

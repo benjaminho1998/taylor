@@ -1,13 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, Suspense, lazy } from 'react';
 import './Home.sass';
 import Featured from '../Featured/Featured';
 import Footer from '../Footer/Footer';
-import Gallery from '../Gallery/Gallery';
+// import Gallery from '../Gallery/Gallery';
 import Explore from '../Explore/Explore';
 
 import Button from 'react-bootstrap/Button';
 
 import Typewriter from 'typewriter-effect';
+
+const Gallery = lazy(() => import('../Gallery/Gallery'));
 
 const Home = () => {
 
@@ -39,7 +41,9 @@ const Home = () => {
                 <Explore />
             </div>
             <Featured />
-            <Gallery />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Gallery />
+            </Suspense>
             <Footer />
         </div>
     );

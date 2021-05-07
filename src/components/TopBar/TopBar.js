@@ -16,6 +16,14 @@ const TopBar = () => {
     }
 
     return (
+        <div>
+        <div className="top-top">
+            <span>
+                Fearless (Taylor's Version) Out Now |
+            </span>
+            <a className="listen-now" style={style} href="https://open.spotify.com/album/4hDok0OAJd57SGIT8xuWJH" target="_blank" rel="noreferrer noopener">Listen Now</a>
+            
+        </div>
         <Navbar className="nav-container" variant="dark" expand="lg">
             <Navbar.Brand as={Link} to="/">
                 <Image className="logo" src={longlive}/>
@@ -35,6 +43,7 @@ const TopBar = () => {
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
+        </div>
     );
 }
 
