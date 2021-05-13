@@ -6,8 +6,7 @@ import ExploreNews from '../ExploreNews/ExploreNews';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
 import { Link } from 'react-router-dom';
 
 import explore1 from '../../images/explore/explore1.jpg';

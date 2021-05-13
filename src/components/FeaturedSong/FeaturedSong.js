@@ -6,23 +6,20 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 
-import feature1 from '../../images/featured/feature1.jpg';
-import feature2 from '../../images/featured/feature2.jpg';
-import feature3 from '../../images/featured/feature3.jpg';
-
 const openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener, noreferrer')
-    if(newWindow) newWindow.opener = null
+    const newWindow = window.open(url, '_blank', 'noopener, noreferrer');
+    if(newWindow) newWindow.opener = null;
 }
 
 const FeaturedSong = (props) => {
+
+    const num = props.image;
+
     return (
         <div className="featured-bot-spacing">
             <Row>
                 <Col lg={4}>
-                    {props.image === '1' && <Image src={feature1}/>}
-                    {props.image === '2' && <Image src={feature2}/>}
-                    {props.image === '3' && <Image src={feature3}/>}
+                    <Image src={process.env.PUBLIC_URL + '/images/featured/feature' + num + '.jpg'}/>
                 </Col>
                 <Col lg={8}>
                     <div className="featured-song-name">
@@ -38,7 +35,7 @@ const FeaturedSong = (props) => {
                     {props.musicVideoUrl !== null && <Button variant="outline-light" onClick={() => openInNewTab(props.musicVideoUrl)}>Music Video</Button>}
                 </Col>
             </Row>
-            {props.image !== '3' && <hr className="horizontal-line"></hr>}
+            {num !== '3' && <hr className="horizontal-line"></hr>}
         </div>
     );
 }

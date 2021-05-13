@@ -1,4 +1,5 @@
-import React from 'react';
+import React
+ from 'react';
 import './News.sass';
 import SmallBanner from '../SmallBanner/SmallBanner';
 import TCarousel from '../TCarousel/TCarousel';
