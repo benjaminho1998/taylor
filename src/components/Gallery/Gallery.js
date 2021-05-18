@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Gallery.sass';
 
-import ImageTile from '../../components/ImageTile/ImageTile';
-import HeaderText from '../../components/HeaderText/HeaderText';
+import ImageTile from '../ImageTile/ImageTile';
+import HeaderText from '../HeaderText/HeaderText';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
