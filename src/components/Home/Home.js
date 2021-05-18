@@ -35,7 +35,7 @@ const Home = () => {
                         .start();
                     }}
                 />
-                <Button className="explore-button" variant="light" onClick={executeScroll}>Explore</Button>
+                <Button className="explore-button" variant="outline-light" onClick={executeScroll}>Explore</Button>
             </div>
             <div ref={myRef}>
                 <Explore />
