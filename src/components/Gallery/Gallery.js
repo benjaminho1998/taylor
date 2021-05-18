@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Gallery.sass';
 
-import ImageTile from '../ImageTile/ImageTile';
+// import ImageTile from '../ImageTile/ImageTile';
 import HeaderText from '../HeaderText/HeaderText';
 
 import Container from 'react-bootstrap/Container';
@@ -19,7 +19,7 @@ const Gallery = () => {
     return (
         <Container>
             <HeaderText title="Gallery" subtitle="Iconic moments through the years" />
-            <Row>
+            {/* <Row>
                 <div className="image-row">
                     <div className="image-col">
                         <ImageTile num="2" desc="Taylor rocks out during her Reputation tour in 2018." />
@@ -51,7 +51,7 @@ const Gallery = () => {
                         }
                     </div>
                 </div>
-            </Row>
+            </Row> */}
             <Row>
                 <div className="button-container">
                     {showMore ? 
